@@ -44,26 +44,60 @@ body{
     background-image:linear-gradient(coral, #5454E8);
     border: dotted 3px whitesmoke;
     height: 100px;
-    width: 200px;
+    width: 300px;
     position: absolute;
     left: 40%;
     top: 80px;
+    animation: fade-in 2.5s ease-in-out;
+    opacity: 1;
+}
+@keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
 }
 .section-header h2{
-    font-family: 'Long Cang', cursive;
-    font-weight: 600;
-    color: whitesmoke;
-    text-align: center;
-    margin-top: 35px;
+    
+  	font: 600 2em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+      display: block;
+      text-align: center;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
 
+/* Clip Background Image */
+
+	  background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  transform: translate3d(0,0,0);
+	  backface-visibility: hidden;
+
+  }
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
 .contact-section{
     height:700px;
     width: 100%;
     background-color:#5454E8; 
     margin-top: 200px;
     position: relative;
+    animation: fade-in 2.5s ease-in-out;
+    opacity: 1;
 }
 
 .mappie{
@@ -128,6 +162,11 @@ iframe{
 
 .social{
     padding: 0px 25px;
+}
+.copy{
+    font-family: 'Long Cang', cursive;
+    font-size: 20px;
+    color: whitesmoke;
 }
 
 .fab{
